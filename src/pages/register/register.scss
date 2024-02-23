@@ -1,0 +1,156 @@
+$lightRed: #ffe4e0;
+$darkRed: #1a0300;
+$primary: #fe5c43;
+$secondary: #380800;
+$accent: #fe2706;
+
+@import "../../style.scss";
+
+
+.register{
+    height: 100vh;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile{
+        background: linear-gradient(#621305c9, #3808008a),
+                url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600") center;
+            background-size: cover;
+            flex-direction: column;
+            gap: 20px;
+      }
+
+
+    .card {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: white;
+        border-radius: 10px;
+        min-height: 400px;
+        overflow: hidden;
+
+        @include mobile{
+            width: 75%;
+          }
+    
+
+
+        .left {
+            flex: 1;
+            background: linear-gradient(#621305c9, #3808008a),
+                url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600") center;
+            background-size: cover;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: white;
+
+            @include mobile{
+                display: none;
+              }
+        
+            h1 {
+                font-size: 50px;
+                line-height: 50px;
+            }
+
+
+            span {
+                font-size: 14px;
+            }
+
+            button {
+                width: 50%;
+                padding: 10px;
+                border: none;
+                background-color: white;
+                color: $secondary;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.35s;
+
+                &:hover{
+                    background-color: $primary;
+                    color: white;
+
+                }
+            }
+
+        }
+
+        .right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+
+            @include mobile{
+                padding: 30px;
+              }
+        
+
+            h1 {
+                color: $darkRed;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 20px 10px;
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
+
+                button {
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: $primary;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: 0.35s;
+                    
+                    @include mobile{
+                        align-self: center;
+                      }
+                
+
+                    &:hover{
+                        background-color: $secondary;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    .mobile{
+        display: none;
+
+        @include mobile{
+            display: flex;
+            color: white;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+          }
+
+        
+    }
+}

@@ -1,0 +1,19 @@
+$lightRed: #ffe4e0;
+$darkRed: #1a0300;
+$primary: #fe5c43;
+$secondary: #380800;
+$accent: #fe2706;
+
+@import "../../style.scss";
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 110PX 70PX;
+
+    @include mobile{
+      padding: 50px 20px; 
+    }
+
+  }
